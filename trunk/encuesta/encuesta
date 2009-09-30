@@ -1,0 +1,70 @@
+set -x
+
+config() {
+	PROFES=profes
+	CURSOS=cursos
+	ALUS=alus
+}
+
+quienso() {
+	YO=$(whoami)
+	read -p "Si no sos $YO, decime quién sos: " ELOTROYO
+	YO=${ELOTROYO:-$YO}
+	echo OK. Sos $YO
+}
+
+main() {
+	select action in \
+		"Agregar curso" \
+		"Anotarse como profe" \
+		"Anotarse como alumno" \
+		"Salir"
+	do
+		case $action in
+			"Agregar curso")
+				agregarCurso;;
+			"Anotarse como profe")
+				agregarProfe;;
+			"Anotarse como alumno")
+				agregarAlu;;
+			"Salir")
+				break 2;;
+			*)
+				echo "No entiendo."
+		esac
+	done
+}
+
+agregarCosaOrdenada() {
+	COSA=$1
+	ARCHIVO=$2
+	MENSAJE=$3
+	grep -q "$COSA" $ARCHIVO && echo $COSA >> $ARCHIVO && sortInline $ARCHIVO && echo $MENSAJE
+}
+
+agregarCurso() {
+	read -p "Nombre del curso: " curso
+	agregarCosaOrdenada "$curso" $CURSOS "Curso $curso agregado."
+}
+
+agregarProfe() {
+	agregarCosaOrdenada "$YO" $PROFES "$YO agregado como profe."
+}
+
+agregarAlu() {
+	agregarCosaOrdenada "$YO" $ALUS "$YO agregado como alumno."
+}
+
+sortInline() {
+	sort $1 > $1.inlineSort && mv $1.inlineSort $1
+}
+
+
+# ------------------------------------------------------[ Main Program ]---
+
+config
+quienso
+main
+
+# vim: tabstop=2 shiftwidth=2 smartindent
+

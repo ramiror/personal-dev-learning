@@ -1,0 +1,4 @@
+!tree
+!***> Global Variables
+!define siteRoot {http://localhost:7777}
+***!

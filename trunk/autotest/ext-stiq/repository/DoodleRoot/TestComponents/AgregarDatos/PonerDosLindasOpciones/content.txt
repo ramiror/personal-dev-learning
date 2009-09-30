@@ -1,0 +1,7 @@
+| Agrega un participante |
+| open | http://localhost:7777/98ttgerf9kny2wa6 |  |
+| type | participantName | stiq3_!random |
+| click | option1 |  |
+| click | option3 |  |
+| clickAndWait | //input[@value='Save'] |  |
+| clickAndWait | //div[@id='content']/div[4]/p/a/span |  |
