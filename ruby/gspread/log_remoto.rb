@@ -1,4 +1,4 @@
-class Logger
+class LogRemoto
   @form_id = nil
   FIXED_PARAMS="submit"
 
@@ -27,7 +27,7 @@ end
 #### Main
 
 def main
-  l = Logger.new "dHRmTVpBa1RhcWhjTEswZjFqREtjd1E6MA"
+  l = LogRemoto.new "dHRmTVpBa1RhcWhjTEswZjFqREtjd1E6MA"
   #puts l.get_url 33, 34
   puts l.report(37, 38).class.name
 end
@@ -37,8 +37,8 @@ main
 ## Tests
 
 # doctest: URL correcta
-# >> l = Logger.new("hola")
+# >> l = LogRemoto.new("hola")
 # >> l.get_url 1, 2, 3, 4
-# => "https://spreadsheets.google.com/formResponse?formkey=hola&entry.0.single=1&entry.1.single=2&entry.2.single=3&entry.3.single=4&submit"
+# => "http://spreadsheets.google.com/formResponse?formkey=hola&entry.0.single=1&entry.1.single=2&entry.2.single=3&entry.3.single=4&submit"
 
 # vim: ts=2 sw=2 et
