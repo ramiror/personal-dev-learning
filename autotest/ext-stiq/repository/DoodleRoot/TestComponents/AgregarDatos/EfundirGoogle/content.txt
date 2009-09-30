@@ -1,0 +1,4 @@
+| Test description |
+| open | / |  |
+| type | q | los dos nombres |
+| click | btnG |  |

@@ -1,0 +1,1 @@
+java -cp "bin/storytestiq.jar:bin/lib/*.jar:bin/lib/fitlibrary-1.1.jar:bin/lib/jdbc-csv-mock.jar:bin/lib/junit-3.8.1.jar:bin/lib/ojdbc-14.jar:bin/lib/selenium-server.jar:bin/lib/sqlserver-1.0.809.jar:bin/lib/Tidy.jar" fitnesse.FitNesse -o -p 9999 -r repository
