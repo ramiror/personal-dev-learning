@@ -1,0 +1,124 @@
+#!/bin/sh
+# This is a shell archive (produced by GNU sharutils 4.7).
+# To extract the files from this archive, save it to some FILE, remove
+# everything before the `#!/bin/sh' line above, then type `sh FILE'.
+#
+lock_dir=_sh03980
+# Made on 2009-10-01 02:22     by <Barba@CHEETAH>.
+# Source directory was `/home/Barba/cursolinux/sols'.
+#
+# Existing files will *not* be overwritten, unless `-c' is specified.
+# This format requires very little intelligence at unshar time.
+# "if test", "echo", "mkdir", and "sed" may be needed.
+#
+# This shar contains:
+# length mode       name
+# ------ ---------- ------------------------------------------
+#    322 -rwxr-xr-x horas.sh
+#     94 -rwxr-xr-x nombres_inicial.sh
+#     82 -rwxr-xr-x nombres_simples.sh
+#     50 -rwxr-xr-x putting_was_the_goose.sh
+#
+echo=echo
+shar_tty= shar_n= shar_c='
+'
+if test ! -d ${lock_dir}
+then : ; else ${echo} 'lock directory '${lock_dir}' exists'
+  exit 1
+fi
+if mkdir ${lock_dir}
+then : ; else ${echo} 'failed to create lock directory'
+  exit 1
+fi
+# ============= horas.sh ==============
+if test -f 'horas.sh' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING horas.sh (file already exists)'
+else
+${echo} 'x - extracting horas.sh (gzipped)'
+  sed 's/^X//' << 'SHAR_EOF' > ${lock_dir}/uue &&
+Xbegin 600 _sh03980/gzi
+XM'XL(`(DZQ$H"`TM-+THM4-!-4]!5L+%Q\_3CBM.(-M`UC+4'DI:Q-49`RCA6
+XMTPI(F<:"A320V)KV*D#U!O;1AB"UAM$&AD9XU"IH:40G%L3F8M6EH`664^$"
+XMN8%+6<$QIR2U*"^Q)+,L,3<UKR151Z&T.#$O)5^A(+,@M=@*J"(5['(E$MU;
+X20Y9[:W"Z5XD+`$=2*^)"`0``
+X`
+Xend
+SHAR_EOF
+  ${echo} 'x -uudecoding file horas.sh' &&
+  uudecode ${lock_dir}/uue < ${lock_dir}/uue &&
+  ${echo} 'x -gunzipping file horas.sh' &&
+  gzip -d < ${lock_dir}/gzi > 'horas.sh' &&
+:
+if test $? -ne 0
+then ${echo} 'restore of horas.sh failed'
+fi
+fi
+# ============= nombres_inicial.sh ==============
+if test -f 'nombres_inicial.sh' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING nombres_inicial.sh (file already exists)'
+else
+${echo} 'x - extracting nombres_inicial.sh (gzipped)'
+  sed 's/^X//' << 'SHAR_EOF' > ${lock_dir}/uue &&
+Xbegin 600 _sh03980/gzi
+XM'XL(`(DZQ$H"`TM-+THM4%"*BW;4C8J-3M2MTHO54M#2`'-C]#3M%;3@,K%:
+X4*DI<RA#U1"E7X@(`SL6@HEX```#4
+X`
+Xend
+SHAR_EOF
+  ${echo} 'x -uudecoding file nombres_inicial.sh' &&
+  uudecode ${lock_dir}/uue < ${lock_dir}/uue &&
+  ${echo} 'x -gunzipping file nombres_inicial.sh' &&
+  gzip -d < ${lock_dir}/gzi > 'nombres_inicial.sh' &&
+:
+if test $? -ne 0
+then ${echo} 'restore of nombres_inicial.sh failed'
+fi
+fi
+# ============= nombres_simples.sh ==============
+if test -f 'nombres_simples.sh' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING nombres_simples.sh (file already exists)'
+else
+${echo} 'x - extracting nombres_simples.sh (gzipped)'
+  sed 's/^X//' << 'SHAR_EOF' > ${lock_dir}/uue &&
+Xbegin 600 _sh03980/gzi
+XM'XL(`(DZQ$H"`TM-+THM4%"*BW;4C8J-3M2MTHO54M""\V*U5)2XE"%J4)5H
+X3@+DQ>IKV*,J5N`":K^_%4@```';4
+X`
+Xend
+SHAR_EOF
+  ${echo} 'x -uudecoding file nombres_simples.sh' &&
+  uudecode ${lock_dir}/uue < ${lock_dir}/uue &&
+  ${echo} 'x -gunzipping file nombres_simples.sh' &&
+  gzip -d < ${lock_dir}/gzi > 'nombres_simples.sh' &&
+:
+if test $? -ne 0
+then ${echo} 'restore of nombres_simples.sh failed'
+fi
+fi
+# ============= putting_was_the_goose.sh ==============
+if test -f 'putting_was_the_goose.sh' && test "$first_param" != -c; then
+  ${echo} 'x -SKIPPING putting_was_the_goose.sh (file already exists)'
+else
+${echo} 'x - extracting putting_was_the_goose.sh (gzipped)'
+  sed 's/^X//' << 'SHAR_EOF' > ${lock_dir}/uue &&
+Xbegin 600 _sh03980/gzi
+XM'XL(`(DZQ$H"`TM-+THM4%#RRL_(JPG.S2S)J/%-+,K,KW%*+$I,+BVN\2TM
+X92LE/SJYQ2RVN"4A-SE;B`@"#PMBA,@```"S)
+X`
+Xend
+SHAR_EOF
+  ${echo} 'x -uudecoding file putting_was_the_goose.sh' &&
+  uudecode ${lock_dir}/uue < ${lock_dir}/uue &&
+  ${echo} 'x -gunzipping file putting_was_the_goose.sh' &&
+  gzip -d < ${lock_dir}/gzi > 'putting_was_the_goose.sh' &&
+:
+if test $? -ne 0
+then ${echo} 'restore of putting_was_the_goose.sh failed'
+fi
+fi
+if rm -fr ${lock_dir}
+then ${echo} 'x - removed lock directory `'${lock_dir}\''.'
+else ${echo} 'x - failed to remove lock directory `'${lock_dir}\''.'
+  exit 1
+fi
+exit 0
