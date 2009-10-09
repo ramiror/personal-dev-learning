@@ -1,0 +1,10 @@
+require "rubygems"
+require "deep_test/rake_tasks"
+require 'rake'
+
+DeepTest::TestTask.new "holas" do |t|
+  t.pattern = "tests/*_test.rb"
+  t.timeout_in_seconds = 3000
+  t.number_of_workers = 50
+  #t.server_port = 4022
+end
