@@ -1,0 +1,1 @@
+tar zcvf $(basename $1)-$(nownow).tgz $1
