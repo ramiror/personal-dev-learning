@@ -1,0 +1,6 @@
+# Uso: several > data
+
+for i in $(seq 1 10)
+do
+  loadTest www.google.com
+done

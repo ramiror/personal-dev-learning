@@ -1,0 +1,4 @@
+set term svg
+set style data lines
+set title 'Tiempos de descarga de www.google.com'
+plot 'data' using 3:xtic(2)
