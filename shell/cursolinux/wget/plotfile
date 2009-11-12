@@ -1,4 +1,6 @@
-set term svg
+set term jpeg
 set style data lines
 set title 'Tiempos de descarga de www.google.com'
-plot 'data' using 3:xtic(2)
+set xlabel "Momento"
+set ylabel "demora (segundos)"
+plot 'data' using 3:xtic(2) title "google secs", 'data' using 4:xtic(2) title "google size"
