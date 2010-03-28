@@ -1,1 +1,2 @@
+#Perlita: Current date with timestamp
 date +%Y.%m.%d-%H%M%S

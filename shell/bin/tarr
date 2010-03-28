@@ -1,1 +1,2 @@
+#Perlita: Tars a subdirectory with a current time appended to the tar file
 tar zcvf $(basename $1)-$(nownow).tgz $1
