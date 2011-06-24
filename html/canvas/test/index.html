@@ -1,0 +1,56 @@
+<html>
+	<body bgcolor="#000000" onkeyup="getKey(event)">
+		<canvas id="example" width="800" height="600">
+		This text is displayed if your browser does not support HTML5 Canvas.
+		</canvas>
+
+		<script language="javascript">
+			function rand(x) {
+				return Math.floor(Math.random()*x);
+			}
+
+			function extend(obj) {
+				Object.getPrototypeOf(obj).putPixel = function(x,y) {
+						this.fillRect(x,y,3,3);
+						return this;
+					}
+
+				Object.getPrototypeOf(obj).randColor = function() {
+					var rgb = "rgb("
+						+ rand(255) + "," 
+						+ rand(255) + ","
+						+ rand(255) + ")";
+					this.fillStyle = rgb;
+					return this;
+				}
+
+				Object.getPrototypeOf(obj).go = function() {
+					this.randColor();
+					this.putPixel(rand(800),rand(600));
+					return this;
+				}
+			}
+
+			function getKey(event) {
+				console.log("tocaron: "+event);
+				stop=true;
+			}
+
+			var example = document.getElementById('example');
+			var context = example.getContext('2d');
+			var stop=false;
+			extend(context);
+			
+			
+			for (i=0; i<400000 && !stop; i++) {
+				context.go();
+			}
+			if (stop) {
+				console.log("terminamos por keystroke");
+			}
+			else {
+				console.log("terminamos de viejos");
+			}
+		</script>
+	</body>
+</html>
