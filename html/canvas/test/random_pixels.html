@@ -1,10 +1,8 @@
 <html>
-	<body bgcolor="#000000" onkeyup="getKey(event)">
-		<canvas id="example" width="800" height="600">
-		This text is displayed if your browser does not support HTML5 Canvas.
-		</canvas>
-
+	<head>
 		<script language="javascript">
+			var stop=false;
+
 			function rand(x) {
 				return Math.floor(Math.random()*x);
 			}
@@ -32,25 +30,42 @@
 			}
 
 			function getKey(event) {
-				console.log("tocaron: "+event);
+				console.log("tocaron: ",event.which);
 				stop=true;
+				console.log("ahora stop es: ",stop);
 			}
 
-			var example = document.getElementById('example');
-			var context = example.getContext('2d');
-			var stop=false;
-			extend(context);
-			
-			
-			for (i=0; i<400000 && !stop; i++) {
-				context.go();
+			function init() {
+				var example = document.getElementById('example');
+				console.log(example);
+				var context = example.getContext('2d');
+				console.log(context);
+				extend(context);
+				return context;
 			}
-			if (stop) {
-				console.log("terminamos por keystroke");
+
+			function draw(context) {
+				for (i=0; i<400000 && !stop; i++) {
+					if (stop) console.log("stop en loop es",stop);
+					context.go();
+				}
+				if (stop) {
+					console.log("terminamos por keystroke");
+				}
+				else {
+					console.log("terminamos de viejos");
+				}
 			}
-			else {
-				console.log("terminamos de viejos");
+
+			function run() {
+				draw(init());
 			}
 		</script>
+	</head>
+	<body bgcolor="#000000" onkeyup="getKey(event)">
+		<canvas id="example" width="800" height="600">
+		This text is displayed if your browser does not support HTML5 Canvas.
+		</canvas>
+		<button type="button" onclick="run()">Dale gas</button>
 	</body>
 </html>
