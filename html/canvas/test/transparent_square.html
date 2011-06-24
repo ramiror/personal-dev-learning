@@ -1,18 +1,25 @@
 <html>
  <head>
   <script type="application/javascript">
-function draw() {
- var canvas = document.getElementById("canvas");
- var ctx = canvas.getContext("2d");
- 
- function cuadradete(ctx,x,y,tx,ty,colorrr) {
-	 ctx.fillStyle = colorrr;
-	 ctx.fillRect (x, y, tx, ty);
- }
- 
- cuadradete(ctx,30,30,50,50,"rgb(200,0,0)");
- cuadradete(ctx,50,50,50,60,"rgba(0, 100, 200, 0.5)");
-}
+		var con=null;
+
+		function cuadradete(ctx,x,y,tx,ty,colorrr) {
+			 ctx.fillStyle = colorrr;
+			 ctx.fillRect (x, y, tx, ty);
+		}
+
+		function segundoCuadrado() {
+			cuadradete(con,50,50,50,60,"rgba(0, 100, 200, 0.5)");
+		}
+
+		function draw() {
+			var canvas = document.getElementById("canvas");
+			var ctx = canvas.getContext("2d");
+			con=ctx;
+
+			cuadradete(ctx,30,30,50,50,"rgb(200,0,0)");
+			setTimeout("segundoCuadrado()", 2000);
+		}
   </script>
  </head>
  <body onload="draw()">
