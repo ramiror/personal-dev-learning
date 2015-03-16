@@ -1,0 +1,3 @@
+This is a personal project, aimed on storing my scripts in some languages.
+
+There are snippets on ruby, python, shell scriting, automated testing with selenium, webdriver, STIQ, ...
